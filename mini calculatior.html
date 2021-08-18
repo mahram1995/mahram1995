@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image:url(bg.jpg) ;
+        background-position:center;
+    }
+    div{
+        width:500px;
+        height: 300px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+    
+
+    .symbol {
+        width:30px;
+        border: none; 
+        height: 30px;
+        border-radius: 5px;
+        padding: 5px;
+        color: #1709e2;
+        font-size: 25px;
+        background-color: #B699EC;
+        text-align: center;
+    }
+    .button{
+        width: 40px;
+        border:1px solid black;
+        border-radius: 4px;
+        height: 25px;
+        font-size:20px;
+    }
+    #n1{
+        width: 220px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 2px;
+        text-align: center;
+        font-size: 20px;
+    }
+    #n2{
+        width:220px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding:2px;
+        text-align: center;
+        font-size: 20px;
+    }
+    #total{
+        width: 220px;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 2px;
+        text-align: center;
+        font-size: 20px;
+     
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Welcome To My Calculator</h1>
+        <input type="text" id="n1" placeholder="inpur your first number">
+        <input class="symbol" type="text" id="symbol">
+        <input type="text" id="n2" placeholder="inpur your first number"><br><br>
+    
+        <button class="button" id="p1" onclick="m1()">+</button>
+        <button class="button" id="p2" onclick="m2()">-</button>
+        <button class="button"  class="button"id="p3" onclick="m3()">x</button>
+        <button class="button" id="p4" onclick="m4()">/</button>
+        <button class="button" id="p5" onclick="m5()">%</button><br><br>
+        <h3>Your result is:</h3> <input type="text" id=total>
+    </div>
+    
+    <script>
+        
+
+
+        function m1() {
+            document.getElementById("p1").style.backgroundColor="#FFF333"
+            document.getElementById("p2").style.backgroundColor="white"
+            document.getElementById("p3").style.backgroundColor="white"
+            document.getElementById("p4").style.backgroundColor="white"
+            document.getElementById("p5").style.backgroundColor="white"
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+            
+            var a = parseInt(x);
+            var b = parseInt(y)
+            add = a + b
+            total.value = (add)
+            symbol.value = "+"
+        }
+        function m2() {
+            document.getElementById("p1").style.backgroundColor="white"
+            document.getElementById("p2").style.backgroundColor="#FFF333"
+            document.getElementById("p3").style.backgroundColor="white"
+            document.getElementById("p4").style.backgroundColor="white"
+            document.getElementById("p5").style.backgroundColor="white"
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+            var a = parseInt(x);
+            var b = parseInt(y)
+            sub = a - b
+            total.value = (sub)
+            symbol.value = "-"
+        }
+        function m3() {
+            document.getElementById("p1").style.backgroundColor="white"
+            document.getElementById("p2").style.backgroundColor="white"
+            document.getElementById("p3").style.backgroundColor="#FFF333"
+            document.getElementById("p4").style.backgroundColor="white"
+            document.getElementById("p5").style.backgroundColor="white"
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+            var a = parseInt(x);
+            var b = parseInt(y)
+            sub = a * b
+            total.value = (sub)
+            symbol.value = "x"
+        }
+        function m4() {
+            document.getElementById("p1").style.backgroundColor="white"
+            document.getElementById("p2").style.backgroundColor="white"
+            document.getElementById("p3").style.backgroundColor="white"
+            document.getElementById("p4").style.backgroundColor="#FFF333"
+            document.getElementById("p5").style.backgroundColor="white"
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+            var a = parseInt(x);
+            var b = parseInt(y)
+            sub = a / b
+            total.value = (sub)
+            symbol.value = "/"
+        }
+        function m5() {
+            document.getElementById("p1").style.backgroundColor="white"
+            document.getElementById("p2").style.backgroundColor="white"
+            document.getElementById("p3").style.backgroundColor="white"
+            document.getElementById("p4").style.backgroundColor="white"
+            document.getElementById("p5").style.backgroundColor="#FFF333"
+            var x = document.getElementById("n1").value;
+            var y = document.getElementById("n2").value;
+            var a = parseInt(x);
+            var b = parseInt(y)
+            sub = a % b
+            total.value = (sub)
+            symbol.value = "%"
+        }
+    </script>
+</body>
+
+</html>
